@@ -1,32 +1,25 @@
-**Breadth First Search **
-Represent the graph using an adjacency list
+1. BFS (Breadth First Search)
 
-Create an empty queue Q
+BFS(graph, StartNode)
 
-Create an empty set/list Visited
+// Graph is represented as adjacency list
 
-Add StartNode to Visited
+CREATE empty queue Q
+CREATE empty set Visited
 
-Enqueue StartNode into Q
+ADD StartNode to Visited
+ENQUEUE StartNode into Q
 
-While Q is not empty do
+WHILE Q is not empty DO
+    CurrentNode = DEQUEUE Q
+    VISIT CurrentNode
 
-Dequeue a node from Q → CurrentNode
+    FOR each Neighbor of CurrentNode in Graph DO
+        IF Neighbor not in Visited THEN
+            ADD Neighbor to Visited
+            ENQUEUE Neighbor into Q
+        END IF
+    END FOR
+END WHILE
 
-Visit CurrentNode
-
-For each neighbor of CurrentNode in Graph do
-
-If neighbor is not in Visited then
-
-Add neighbor to Visited
-
-Enqueue neighbor into Q
-
-End If
-
-End For
-
-End While
-
-End BFS
+END BFS
