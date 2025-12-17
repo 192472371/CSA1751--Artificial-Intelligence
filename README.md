@@ -1,5 +1,6 @@
-1. BFS (Breadth First Search)
+## BFS (Breadth First Search)
 
+```text
 BFS(graph, StartNode)
 // Graph is represented as adjacency list
 
@@ -22,5 +23,6 @@ WHILE Q is not empty DO
 END WHILE
 
 END BFS
+```
 
 
