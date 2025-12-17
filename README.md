@@ -2,10 +2,13 @@
 
 BFS(graph, StartNode)
 // Graph is represented as adjacency list
+
 CREATE empty queue Q
 CREATE empty set Visited
+
 ADD StartNode to Visited
 ENQUEUE StartNode into Q
+
 WHILE Q is not empty DO
     CurrentNode = DEQUEUE Q
     VISIT CurrentNode
@@ -17,4 +20,5 @@ WHILE Q is not empty DO
         END IF
     END FOR
 END WHILE
+
 END BFS
