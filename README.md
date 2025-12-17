@@ -43,3 +43,33 @@ END FOR
 
 END DFS
 ```
+
+## UCS (Uniform Cost Search)
+
+```text
+UCS(graph, StartNode, GoalNode)
+// Graph is represented as adjacency list with costs
+
+CREATE priority queue PQ
+CREATE empty set Visited
+
+INSERT (0, StartNode) into PQ
+
+WHILE PQ is not empty DO
+    (cost, CurrentNode) = REMOVE node with minimum cost from PQ
+
+    IF CurrentNode is GoalNode THEN
+        RETURN cost
+    END IF
+
+    IF CurrentNode not in Visited THEN
+        ADD CurrentNode to Visited
+
+        FOR each (Neighbor, EdgeCost) of CurrentNode DO
+            INSERT (cost + EdgeCost, Neighbor) into PQ
+        END FOR
+    END IF
+END WHILE
+
+END UCS
+```
