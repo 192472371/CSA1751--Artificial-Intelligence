@@ -1,6 +1,6 @@
 1. BFS (Breadth First Search)
 
-BFS(graph, StartNode)
+     BFS(graph, StartNode)
 // Graph is represented as adjacency list
 
 CREATE empty queue Q
@@ -22,3 +22,4 @@ WHILE Q is not empty DO
 END WHILE
 
 END BFS
+
