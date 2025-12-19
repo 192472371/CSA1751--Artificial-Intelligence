@@ -106,3 +106,35 @@ END WHILE
 
 END A*
 ```
+
+## GBFS Algorithm (README.md / Exam Format
+
+```text
+GBFS(graph, StartNode, GoalNode)
+// Graph is represented as adjacency list
+// h(n) is the heuristic function
+
+CREATE priority queue OPEN
+CREATE empty set CLOSED
+
+INSERT (h(StartNode), StartNode) into OPEN
+
+WHILE OPEN is not empty DO
+    (h, CurrentNode) = REMOVE node with lowest heuristic value from OPEN
+
+    IF CurrentNode is GoalNode THEN
+        RETURN SUCCESS
+    END IF
+
+    ADD CurrentNode to CLOSED
+
+    FOR each (Neighbor, Cost) of CurrentNode DO
+        IF Neighbor not in CLOSED THEN
+            INSERT (h(Neighbor), Neighbor) into OPEN
+        END IF
+    END FOR
+END WHILE
+
+END GBFS
+```
+
