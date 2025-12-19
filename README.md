@@ -74,7 +74,7 @@ END WHILE
 END UCS
 ```
 
-# A* Search Algorithm 
+## A* Search Algorithm 
 
 ```text
 A*(graph, StartNode, GoalNode)
