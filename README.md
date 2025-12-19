@@ -73,3 +73,36 @@ END WHILE
 
 END UCS
 ```
+
+# A* Search Algorithm 
+
+```text
+A*(graph, StartNode, GoalNode)
+// Graph is represented as adjacency list with costs
+// h(n) is the heuristic function
+
+CREATE priority queue OPEN
+CREATE empty set CLOSED
+
+INSERT (f= h(StartNode), g=0, StartNode) into OPEN
+
+WHILE OPEN is not empty DO
+    (f, g, CurrentNode) = REMOVE node with lowest f value from OPEN
+
+    IF CurrentNode is GoalNode THEN
+        RETURN g   // total path cost
+    END IF
+
+    ADD CurrentNode to CLOSED
+
+    FOR each (Neighbor, Cost) of CurrentNode DO
+        IF Neighbor not in CLOSED THEN
+            g_new = g + Cost
+            f_new = g_new + h(Neighbor)
+            INSERT (f_new, g_new, Neighbor) into OPEN
+        END IF
+    END FOR
+END WHILE
+
+END A*
+```
