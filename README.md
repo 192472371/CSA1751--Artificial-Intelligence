@@ -107,7 +107,7 @@ END WHILE
 END A*
 ```
 
-## GBFS Algorithm (README.md / Exam Format
+## GBFS Algorithm
 
 ```text
 GBFS(graph, StartNode, GoalNode)
