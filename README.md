@@ -295,7 +295,7 @@ FUNCTION Solve(Puzzle, Letters, Mapping)
 END FUNCTION
 ```
 
-## 8- Puzzle
+## 8 - Puzzle Algorithm
 
 ```text
 8PuzzleBFS(StartState, GoalState)
@@ -323,4 +323,19 @@ WHILE Q is not empty DO
 END WHILE
 
 RETURN "No solution found"
+```
+
+## 8-Queen Algorithm 
+
+```text
+PlaceQueen(row):
+    IF row == 8 THEN
+        PRINT current board as a solution
+        RETURN
+
+    FOR col in 0 to 7 DO
+        IF placing a queen at (row, col) is safe THEN
+            place queen at (row, col)
+            PlaceQueen(row + 1)
+            remove queen at (row, col)  // backtrack
 ```
