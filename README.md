@@ -263,3 +263,34 @@ END FOR
 
 RETURN Root
 ```
+
+## CRYPT Arithematic Problem 
+
+```text
+CRYPTOARITHMETIC(Puzzle)
+
+LET Letters = all unique letters in Puzzle
+LET N = number of unique letters
+
+FUNCTION Solve(Puzzle, Letters, Mapping)
+
+    IF all Letters are assigned digits THEN
+        SUBSTITUTE letters in Puzzle with Mapping
+        IF arithmetic equation is valid THEN
+            PRINT Mapping
+        END IF
+        RETURN
+    END IF
+
+    LET CurrentLetter = next unassigned letter in Letters
+
+    FOR Digit in 0 to 9 DO
+        IF Digit not already used in Mapping THEN
+            ASSIGN CurrentLetter = Digit
+            Solve(Puzzle, Letters, Mapping)
+            UNASSIGN CurrentLetter
+        END IF
+    END FOR
+
+END FUNCTION
+```
