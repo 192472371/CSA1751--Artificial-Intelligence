@@ -138,3 +138,28 @@ END WHILE
 END GBFS
 ```
 
+## Minimax Algorithm 
+
+```text
+MINIMAX(Node, Depth, IsMaximizing)
+
+IF Depth == 0 OR Node is terminal THEN
+    RETURN value of Node
+END IF
+
+IF IsMaximizingPlayer THEN
+    BestValue = -∞
+    FOR each Child of Node DO
+        Value = MINIMAX(Child, Depth-1, FALSE)
+        BestValue = MAX(BestValue, Value)
+    END FOR
+    RETURN BestValue
+ELSE
+    BestValue = +∞
+    FOR each Child of Node DO
+        Value = MINIMAX(Child, Depth-1, TRUE)
+        BestValue = MIN(BestValue, Value)
+    END FOR
+    RETURN BestValue
+END IF
+```
