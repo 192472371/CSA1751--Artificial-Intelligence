@@ -163,3 +163,39 @@ ELSE
     RETURN BestValue
 END IF
 ```
+
+##  α-β pruning Algorithm
+
+```text
+ALPHABETA(Node, Depth, α, β, IsMaximizing)
+
+IF Depth == 0 OR Node is terminal THEN
+    RETURN value of Node
+END IF
+
+IF IsMaximizingPlayer THEN
+    BestValue = -∞
+    FOR each Child of Node DO
+        Value = ALPHABETA(Child, Depth-1, α, β, FALSE)
+        BestValue = MAX(BestValue, Value)
+        α = MAX(α, BestValue)
+
+        IF β ≤ α THEN
+            BREAK   // Beta cut-off
+        END IF
+    END FOR
+    RETURN BestValue
+ELSE
+    BestValue = +∞
+    FOR each Child of Node DO
+        Value = ALPHABETA(Child, Depth-1, α, β, TRUE)
+        BestValue = MIN(BestValue, Value)
+        β = MIN(β, BestValue)
+
+        IF β ≤ α THEN
+            BREAK   // Alpha cut-off
+        END IF
+    END FOR
+    RETURN BestValue
+END IF
+```
