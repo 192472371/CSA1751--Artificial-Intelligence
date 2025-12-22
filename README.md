@@ -233,3 +233,33 @@ WHILE Q is not empty DO
     END FOR
 END WHILE
 ```
+
+## Decision Tree
+
+```text
+ID3DecisionTree(Dataset, Attributes)
+
+IF all examples in Dataset have same class THEN
+    RETURN Leaf Node with that class
+END IF
+
+IF Attributes is empty THEN
+    RETURN Leaf Node with majority class of Dataset
+END IF
+
+BestAttribute = attribute in Attributes with highest info_gain(Dataset, attribute)
+CREATE Node Root with BestAttribute
+
+FOR each value v in Values(BestAttribute, Dataset) DO
+    Subset = examples in Dataset where BestAttribute = v
+
+    IF Subset is empty THEN
+        ADD Leaf Node to Root with majority class of Dataset
+    ELSE
+        Subtree = ID3DecisionTree(Subset, Attributes without BestAttribute)
+        ADD Subtree to Root under branch v
+    END IF
+END FOR
+
+RETURN Root
+```
