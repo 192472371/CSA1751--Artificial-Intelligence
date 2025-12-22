@@ -199,3 +199,37 @@ ELSE
     RETURN BestValue
 END IF
 ```
+
+## Water Jug Problem 
+
+```text
+WATER-JUG(Jug1, Jug2, Target)
+
+CREATE empty queue Q
+CREATE empty set Visited
+
+ADD (0, 0) to Q and Visited
+
+WHILE Q is not empty DO
+    (x, y) = DEQUEUE Q
+
+    IF x == Target OR y == Target THEN
+        PRINT solution path
+        EXIT
+    END IF
+
+    GENERATE all possible next states:
+        1. Fill Jug1
+        2. Fill Jug2
+        3. Empty Jug1
+        4. Empty Jug2
+        5. Pour Jug1 → Jug2
+        6. Pour Jug2 → Jug1
+
+    FOR each new state DO
+        IF not in Visited THEN
+            ADD to Visited and Q
+        END IF
+    END FOR
+END WHILE
+```
