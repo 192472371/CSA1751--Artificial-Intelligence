@@ -294,3 +294,33 @@ FUNCTION Solve(Puzzle, Letters, Mapping)
 
 END FUNCTION
 ```
+
+## 8- Puzzle
+
+```text
+8PuzzleBFS(StartState, GoalState)
+
+CREATE empty queue Q
+CREATE empty set Visited
+
+ENQUEUE (StartState, []) into Q  // state + moves taken
+ADD StartState to Visited
+
+WHILE Q is not empty DO
+    (CurrentState, Moves) = DEQUEUE Q
+    
+    IF CurrentState == GoalState THEN
+        RETURN Moves  // solution found
+    END IF
+
+    FOR each valid move (Up, Down, Left, Right) DO
+        NextState = result of moving empty tile
+        IF NextState not in Visited THEN
+            ADD NextState to Visited
+            ENQUEUE (NextState, Moves + [Move])
+        END IF
+    END FOR
+END WHILE
+
+RETURN "No solution found"
+```
