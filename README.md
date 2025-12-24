@@ -295,6 +295,34 @@ FUNCTION Solve(Puzzle, Letters, Mapping)
 END FUNCTION
 ```
 
+## FeedForward Neural Network
+
+```text
+FEEDFORWARD_NEURAL_NETWORK
+
+READ input values x1, x2
+
+READ weights w13, w23
+READ weights w14, w24
+READ weights w35, w45
+
+DEFINE sigmoid(x) = 1 / (1 + e^(-x))
+
+COMPUTE a3 = (w13 × x1) + (w23 × x2)
+COMPUTE y3 = sigmoid(a3)
+
+COMPUTE a4 = (w14 × x1) + (w24 × x2)
+COMPUTE y4 = sigmoid(a4)
+
+COMPUTE a5 = (w35 × y3) + (w45 × y4)
+COMPUTE y5 = sigmoid(a5)
+
+PRINT final output y5
+
+END
+```
+
+
 ## 8 - Puzzle Algorithm
 
 ```text
