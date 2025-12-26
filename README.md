@@ -591,20 +591,6 @@ DISPLAY success or failure
 END
 ```
 
-## Web Blog Using WordPress (Anchor Tag, Title Tag)
-
-```text
-WORDPRESS_WEB_BLOG
-
-CREATE WordPress account
-CREATE new blog post
-ADD title tag
-ADD anchor tags and content
-PUBLISH blog
-
-END
-```
-
 ## Prolog Program for Pattern Matching
 
 ```text
