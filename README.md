@@ -419,3 +419,194 @@ PlaceQueen(row):
             PlaceQueen(row + 1)
             remove queen at (row, col)  // backtrack
 ```
+
+## Prolog Program for STUDENT–TEACHER–SUBJECT–CODE
+
+```text
+STUDENT_TEACHER_SUBJECT_CODE
+
+STORE facts linking student, teacher, subject, subject_code
+ACCEPT query for student or subject
+MATCH facts using unification
+DISPLAY related teacher and subject_code
+
+END
+```
+
+
+## Prolog Program for PLANETS Database
+
+``text
+PLANETS_DATABASE
+
+STORE planet facts with properties
+ACCEPT query for planet or property
+MATCH facts using rules
+DISPLAY required planet information
+
+END
+```
+
+
+## Prolog Program for Towers of Hanoi
+
+```text
+TOWERS_OF_HANOI
+
+IF number_of_disks = 1
+    MOVE disk from source to destination
+ELSE
+    MOVE n-1 disks from source to auxiliary
+    MOVE nth disk from source to destination
+    MOVE n-1 disks from auxiliary to destination
+END IF
+
+END
+```
+
+
+## Prolog Program to Check Whether a Bird Can Fly
+
+```text
+BIRD_CAN_FLY
+
+STORE bird facts
+STORE flying and non-flying rules
+ACCEPT bird name as query
+CHECK rules
+DISPLAY whether bird can fly or not
+
+END
+```
+
+## Prolog Program for Family Tree
+
+```text
+FAMILY_TREE
+
+STORE parent relationships
+DEFINE rules for father, mother, sibling, grandparent
+ACCEPT relationship query
+INFER relationship using rules
+DISPLAY result
+
+END
+```
+
+
+## Prolog Program to Suggest Dieting System Based on Disease
+
+```text
+DIET_SUGGESTION_SYSTEM
+
+STORE disease and diet facts
+ACCEPT disease name as input
+MATCH disease with diet rule
+DISPLAY suggested diet plan
+
+END
+```
+
+## Prolog Program for Monkey–Banana Problem
+
+```text
+MONKEY_BANANA_PROBLEM
+
+DEFINE initial state of monkey, box, banana
+DEFINE possible actions (move, climb, grab)
+APPLY actions using rules
+CHECK goal state (monkey has banana)
+DISPLAY solution path
+
+END
+```
+
+## Prolog Program for Fruit and Color Using Backtracking
+
+`text
+FRUIT_COLOR_BACKTRACKING
+
+STORE fruit-color facts
+ACCEPT fruit or color query
+USE backtracking to find all matches
+DISPLAY possible results
+
+END
+`
+
+10. Prolog Program to Implement Best First Search
+BEST_FIRST_SEARCH
+
+INITIALIZE open list with start node
+WHILE open list not empty
+    SELECT node with best heuristic value
+    IF goal reached
+        STOP
+    ELSE
+        EXPAND node and add successors
+END WHILE
+
+END
+
+11. Prolog Program for Medical Diagnosis
+MEDICAL_DIAGNOSIS_SYSTEM
+
+STORE symptoms and disease facts
+ACCEPT patient symptoms
+MATCH symptoms with disease rules
+DISPLAY possible disease
+
+END
+
+12. Prolog Program for Forward Chaining
+FORWARD_CHAINING
+
+STORE initial facts
+STORE inference rules
+APPLY rules to derive new facts
+REPEAT until no new facts
+DISPLAY inferred results
+
+END
+
+13. Prolog Program for Backward Chaining
+BACKWARD_CHAINING
+
+ACCEPT goal as query
+SEARCH rules whose conclusion matches goal
+RECURSIVELY prove sub-goals
+DISPLAY success or failure
+
+END
+
+14. Web Blog Using WordPress (Anchor Tag, Title Tag)
+WORDPRESS_WEB_BLOG
+
+CREATE WordPress account
+CREATE new blog post
+ADD title tag
+ADD anchor tags and content
+PUBLISH blog
+
+END
+
+15. Prolog Program for Pattern Matching
+PATTERN_MATCHING
+
+STORE patterns as facts
+ACCEPT input pattern
+MATCH input with stored patterns
+DISPLAY matching result
+
+END
+
+16. Prolog Program to Find Number of Vowels
+COUNT_VOWELS
+
+ACCEPT input string
+CHECK each character
+IF character is vowel
+    INCREMENT count
+DISPLAY total vowel count
+
+END
