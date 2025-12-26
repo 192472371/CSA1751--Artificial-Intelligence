@@ -436,7 +436,7 @@ END
 
 ## Prolog Program for PLANETS Database
 
-``text
+```text
 PLANETS_DATABASE
 
 STORE planet facts with properties
@@ -523,7 +523,7 @@ END
 
 ## Prolog Program for Fruit and Color Using Backtracking
 
-`text
+```text
 FRUIT_COLOR_BACKTRACKING
 
 STORE fruit-color facts
@@ -532,9 +532,11 @@ USE backtracking to find all matches
 DISPLAY possible results
 
 END
-`
+```
 
-10. Prolog Program to Implement Best First Search
+## Prolog Program to Implement Best First Search
+
+```text
 BEST_FIRST_SEARCH
 
 INITIALIZE open list with start node
@@ -547,8 +549,11 @@ WHILE open list not empty
 END WHILE
 
 END
+```
 
-11. Prolog Program for Medical Diagnosis
+## Prolog Program for Medical Diagnosis
+
+```text
 MEDICAL_DIAGNOSIS_SYSTEM
 
 STORE symptoms and disease facts
@@ -557,8 +562,11 @@ MATCH symptoms with disease rules
 DISPLAY possible disease
 
 END
+```
 
-12. Prolog Program for Forward Chaining
+## Prolog Program for Forward Chaining
+
+```text
 FORWARD_CHAINING
 
 STORE initial facts
@@ -568,8 +576,11 @@ REPEAT until no new facts
 DISPLAY inferred results
 
 END
+```
 
-13. Prolog Program for Backward Chaining
+## Prolog Program for Backward Chaining
+
+```text
 BACKWARD_CHAINING
 
 ACCEPT goal as query
@@ -578,8 +589,11 @@ RECURSIVELY prove sub-goals
 DISPLAY success or failure
 
 END
+```
 
-14. Web Blog Using WordPress (Anchor Tag, Title Tag)
+## Web Blog Using WordPress (Anchor Tag, Title Tag)
+
+```text
 WORDPRESS_WEB_BLOG
 
 CREATE WordPress account
@@ -589,8 +603,11 @@ ADD anchor tags and content
 PUBLISH blog
 
 END
+```
 
-15. Prolog Program for Pattern Matching
+## Prolog Program for Pattern Matching
+
+```text
 PATTERN_MATCHING
 
 STORE patterns as facts
@@ -599,8 +616,11 @@ MATCH input with stored patterns
 DISPLAY matching result
 
 END
+```
 
-16. Prolog Program to Find Number of Vowels
+## Prolog Program to Find Number of Vowels
+
+```text
 COUNT_VOWELS
 
 ACCEPT input string
@@ -610,3 +630,4 @@ IF character is vowel
 DISPLAY total vowel count
 
 END
+```
