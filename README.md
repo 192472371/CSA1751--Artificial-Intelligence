@@ -617,3 +617,19 @@ DISPLAY total vowel count
 
 END
 ```
+
+## Prolog program WEB BLOG USING WORDPRESS
+
+```text
+WEB_BLOG_USING_WORDPRESS
+
+STORE title of the blog
+STORE headings used in the blog
+STORE anchor links
+STORE images used in the blog
+
+ACCEPT query for blog components
+DISPLAY corresponding details
+
+END
+```
